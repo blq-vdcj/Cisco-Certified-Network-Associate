@@ -67,7 +67,7 @@ Algorythme > Dijkstra/SPF
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------
 
-##### ***fonctionnement d'ospf***
+#### ***fonctionnement d'ospf***
 
 Adjencency / neighbords table :
 
