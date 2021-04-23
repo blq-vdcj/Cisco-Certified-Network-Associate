@@ -15,7 +15,7 @@ modified: '2021-03-12T12:56:19.644Z'
 1) limiter le nombre d'adresse MAC
 2) valdier adresse MAC source
 
-### Parametres :
+##### Parametres :
 
     Nombre d'adresse Mac MAX (defaut=1)
     Mode de réaction (violation mode)
@@ -29,7 +29,7 @@ modified: '2021-03-12T12:56:19.644Z'
 
 *** Ne marche pas normalement sur port dynamic ou port trunk;sauf si port sécurity parametre sur acces et changer en trunk ou dynamique***
 
-## Config dans le switch
+##### Config dans le switch
 
       2960-7#show port-security
       Secure Port  MaxSecureAddr  CurrentAddr  SecurityViolation  Security Action
@@ -41,7 +41,7 @@ modified: '2021-03-12T12:56:19.644Z'
 
 ***une interface sur laquelle le port sécurity est activé apparait ici si shut ou no shut***
 
-### ***Activer port-security***
+##### ***Activer port-security***
 
     2960-7#conf t
     Enter configuration commands, one per line.  End with CNTL/Z.
@@ -52,7 +52,7 @@ modified: '2021-03-12T12:56:19.644Z'
     2960-7(config-if)#switchport port-security
 
 
-### ***verification du port sécurity***
+##### ***verification du port sécurity***
 
     2960-7#show port-security
     Secure Port  MaxSecureAddr  CurrentAddr  SecurityViolation  Security Action
@@ -63,7 +63,7 @@ modified: '2021-03-12T12:56:19.644Z'
     Total Addresses in System (excluding one mac per port)     : 0
     Max Addresses limit in System (excluding one mac per port) : 8192
 
-### ***Configuration port-security***
+##### ***Configuration port-security***
 
     2960-7(config)#int fa0/2
     2960-7(config-if)#sw mo acc             ( switchport mode access)
@@ -86,11 +86,11 @@ modified: '2021-03-12T12:56:19.644Z'
       sticky  Configure dynamic secure addresses as sticky
     2960-7(config-if)#sw po mac-address sticky    (apprentissage dynamique des mac adress par le switch )
 
-### ***Activation port-security***
+##### ***Activation port-security***
 
     2960-7(config-if)#switchport port-security
 
-### ***Verification switchport sécurity***
+##### ***Verification switchport sécurity***
 
     2960-7#show port-security
     Secure Port  MaxSecureAddr  CurrentAddr  SecurityViolation  Security Action
@@ -104,7 +104,7 @@ modified: '2021-03-12T12:56:19.644Z'
     Max Addresses limit in System (excluding one mac per port) : 8192
 
 
-### ***2960-7#show port-security interface <interface>*** voir le mode sticky // ou show running-config
+##### ***2960-7#show port-security interface <interface>*** voir le mode sticky // ou show running-config
 
     2960-7#sh po interface fa0/3
     % Ambiguous command:  "sh po interface fa0/3"
