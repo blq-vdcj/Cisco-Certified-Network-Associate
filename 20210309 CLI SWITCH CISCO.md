@@ -7,7 +7,7 @@ modified: '2021-03-10T08:04:26.372Z'
 
 # 20210309 CLI SWITCH CISCO
 
-*** switch a utiliser #2960-7 (convention steve)***
+***switch a utiliser #2960-7 (convention steve)***
 
     routeur >>> fa0/0 192.168.0.32 /24
     
@@ -184,7 +184,7 @@ modified: '2021-03-10T08:04:26.372Z'
 
 ***********************************************************************************************************
 
-#### ***METHODE DE RECHERCHE RAPIDE ET FOCALISER*** 
+##### ***METHODE DE RECHERCHE RAPIDE ET FOCALISER*** 
 
 ***show interface fa0/0 | include <>***     (chercher mac adress du routeur sur le ROUTEUR )
 
@@ -198,7 +198,7 @@ modified: '2021-03-10T08:04:26.372Z'
 
 ***********************************************************************************************************
 
-## ***CDP ( CISCO DISCOVERY PROTOCOL )*** concurrent libre LLDP 
+##### ***CDP ( CISCO DISCOVERY PROTOCOL )*** concurrent libre LLDP 
     
     > protocol de niveau l2 ( sur la liaison pas commuté)
     > Propriétaire a cisco
@@ -224,7 +224,7 @@ modified: '2021-03-10T08:04:26.372Z'
               platform : type de platform = modele
               Port id : interface du voisin 
 
-#### ***2960-7#show cdp neigh detail***
+##### ***2960-7#show cdp neigh detail***
 
             2960-7#show cdp neigh detail
             -------------------------
@@ -284,7 +284,7 @@ modified: '2021-03-10T08:04:26.372Z'
             Duplex: full
             Management address(es):
 
-### ***show cdp entry <HOSTNAME>*** (meme qu'avant mais simplifié sur un hostname)
+##### ***show cdp entry <HOSTNAME>*** (meme qu'avant mais simplifié sur un hostname)
         
         2960-7#show cdp entry P3R2
         -------------------------
@@ -305,7 +305,7 @@ modified: '2021-03-10T08:04:26.372Z'
         Duplex: full
         Management address(es):
 
-### ***2960-7#show cdp*** parametre de cdp
+##### ***2960-7#show cdp*** parametre de cdp
 
      2960-7#show cdp
       Global CDP information:
@@ -313,7 +313,7 @@ modified: '2021-03-10T08:04:26.372Z'
               Sending a holdtime value of 180 seconds
               Sending CDPv2 advertisements is enabled
 
-### ***show cdp interface <FA0/xx>*** information sur l'interface
+##### ***show cdp interface <FA0/xx>*** information sur l'interface
 
           2960-7#show cdp interface fa0/13
       FastEthernet0/13 is down, line protocol is down
@@ -321,7 +321,7 @@ modified: '2021-03-10T08:04:26.372Z'
         Sending CDP packets every 60 seconds
         Holdtime is 180 seconds
 
-### ***show cdp traffic***
+##### ***show cdp traffic***
 
         2960-7#show cdp traffic
         CDP counters :
@@ -331,7 +331,7 @@ modified: '2021-03-10T08:04:26.372Z'
                 CDP version 1 advertisements output: 0, Input: 0
                 CDP version 2 advertisements output: 173, Input: 169
 
-### ***desactiver cdp global*** ( plus sécuritaire pour la transmission d'info , par interface ou globalement)
+##### ***desactiver cdp global*** ( plus sécuritaire pour la transmission d'info , par interface ou globalement)
 
           2960-7#conf t
           Enter configuration commands, one per line.  End with CNTL/Z.
@@ -340,27 +340,27 @@ modified: '2021-03-10T08:04:26.372Z'
           2960-7#sh cdp
           % CDP is not enabled
 
-### ***activer cdp global***
+##### ***activer cdp global***
 
           2960-7#conf t
           Enter configuration commands, one per line.  End with CNTL/Z.
           2960-7(config)#cdp run
 
-### ***activer cdp interface***
+##### ***activer cdp interface***
 
     2960-7#conf t
     Enter configuration commands, one per line.  End with CNTL/Z.
     2960-7(config)#int fa0/13
     2960-7(config-if)#cdp enable
 
-### ***desactiver cdp interface***
+##### ***desactiver cdp interface***
 
     2960-7#conf t
     Enter configuration commands, one per line.  End with CNTL/Z.
     2960-7(config)#int fa0/13
     2960-7(config-if)#no cdp enable
 
-## ***reglage cdp holdtime et interval***
+##### ***reglage cdp holdtime et interval***
 
     2960-7#conf t
     Enter configuration commands, one per line.  End with CNTL/Z.
@@ -371,7 +371,7 @@ modified: '2021-03-10T08:04:26.372Z'
 
 ***********************************************************************************************************
 
-### ***2960-7#show int fa0/22***
+##### ***2960-7#show int fa0/22***
 
     2960-7#show int fa0/22
     FastEthernet0/22 is up, line protocol is up (connected)
@@ -391,7 +391,7 @@ modified: '2021-03-10T08:04:26.372Z'
 
 ***********************************************************************************************************
 
-### ***Configuration en package (config de tt les interfaces en meme temps)***
+##### ***Configuration en package (config de tt les interfaces en meme temps)***
 
     2960-7(config)#interface range fa0/1, fa0/15 (seulement sur les interface listé, toujours mettre espace)
 
@@ -402,7 +402,7 @@ modified: '2021-03-10T08:04:26.372Z'
     2960-7(config-if-range)#                    (resultat de ces commandes)
 
 
-### ***2960-7(config-if-range)#desc test range***
+##### ***2960-7(config-if-range)#desc test range***
 
       Port      Name               Status       Vlan       Duplex  Speed Type
       Fa0/1     test range         notconnect   1            auto   auto 10/100BaseTX
@@ -436,7 +436,7 @@ modified: '2021-03-10T08:04:26.372Z'
 
 
 
-### ***2960-7#show running-config*** ( proof que ce n'est pas un objet reel, juste une duplication de commande)
+##### ***2960-7#show running-config*** ( proof que ce n'est pas un objet reel, juste une duplication de commande)
 
       interface FastEthernet0/1
       description test range
@@ -451,7 +451,7 @@ modified: '2021-03-10T08:04:26.372Z'
 
 ***********************************************************************************************************
 
-## ***VLAN*** 
+##### ***VLAN*** 
 
     vlan = subdiviser le switch en plusieur domaine de diffusion
     trunk permet de gardé la continuité du domaine de diffusion a travers plusieurs equipements ( switch )
@@ -474,7 +474,7 @@ Dot1q = taggé information dans la trame
 dans le tag on trouve vlanid et qos (codé sur 3 bytes) 
 exemple telephone cisco sur lequel un pc est cablé, qos pr definir les trames voip prioritaire par rapport au pc ( les telephons cisco voip on a un micro switch pr le faire)
 
-### Configuration VLAN
+##### Configuration VLAN
 
       Vlan valeur defaut = Vlan 1
 
@@ -511,7 +511,7 @@ exemple telephone cisco sur lequel un pc est cablé, qos pr definir les trames v
       Gi0/2                        connected    1          a-full a-1000 10/100/1000BaseTX
 
 
-### ***show vlan*** commande de base pour verifier si il y a vlan
+##### ***show vlan*** commande de base pour verifier si il y a vlan
 
         2960-7#show vlan  ( tjrs 4 vlan present qu'on ne peut pas supprimer 1002 1003 1004 1005)
         vlan entre 1 et 4095 ( zero pas utilisé)
@@ -548,7 +548,7 @@ exemple telephone cisco sur lequel un pc est cablé, qos pr definir les trames v
         Primary Secondary Type              Ports
         ------- --------- ----------------- ------------------------------------------
 
-### ***Show vlan brief***
+##### ***Show vlan brief***
 
       2960-7#show vlan brief
       VLAN Name                             Status    Ports
@@ -572,7 +572,7 @@ exemple telephone cisco sur lequel un pc est cablé, qos pr definir les trames v
       cdp par exemple est véhiculé dans vlan1
       dans la pratique on sort tout les interfaces du vlan1 car necessaire pr les protocol
 
-### ***Creation, suppression, modification de VLAN***
+##### ***Creation, suppression, modification de VLAN***
 
           2960-7#conf t
           2960-7(config)#vlan 10
@@ -631,7 +631,7 @@ exemple telephone cisco sur lequel un pc est cablé, qos pr definir les trames v
           PROTOCOL DTP dynamic trunk protocol ( protocol sans sécurité et pas tres fiable )
           bonne pratique tjrs mettre en acces, sauf quand on veux un trunk
 
-#### ***confiuration du switchport en mode acces*** (bonnes pratiques)
+##### ***confiuration du switchport en mode acces*** (bonnes pratiques)
 
 ***2960-7(config-if)#switchport mode access*** 
 ***2960-7(config-if)#switchport acces vlan <vlanid>***
@@ -667,7 +667,7 @@ exemple telephone cisco sur lequel un pc est cablé, qos pr definir les trames v
         Unknown multicast blocked: disabled
         Appliance trust: none
 
-### ***creation du trunk***
+##### ***creation du trunk***
 
       2960-7#conf t
       Enter configuration commands, one per line.  End with CNTL/Z.
@@ -681,7 +681,7 @@ exemple telephone cisco sur lequel un pc est cablé, qos pr definir les trames v
       Administrative Mode: trunk
       Operational Mode: trunk
 
-### ***2960-7#sh int trunk***  (commande de base pour le trunk)
+##### ***2960-7#sh int trunk***  (commande de base pour le trunk)
 
       2960-7#sh int trunk
 
@@ -704,7 +704,7 @@ exemple telephone cisco sur lequel un pc est cablé, qos pr definir les trames v
       vlan present dans la troisieme partie = vraiment présent
 
 
-### ***remettre interface a défault***
+##### ***remettre interface a défault***
 
         (config)# default interface fa0/1
 
