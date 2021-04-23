@@ -1,10 +1,3 @@
----
-attachments: [Clipboard_2021-03-12-09-23-48.png, Clipboard_2021-03-12-09-28-57.png]
-title: 20210312 Port-sécurity>switch
-created: '2021-03-12T08:01:44.148Z'
-modified: '2021-03-12T12:56:19.644Z'
----
-
 # 20210312 ***Port-sécurity>switch***
 
     > mac address
@@ -39,7 +32,7 @@ modified: '2021-03-12T12:56:19.644Z'
       Total Addresses in System (excluding one mac per port)     : 0
       Max Addresses limit in System (excluding one mac per port) : 8192
 
-***une interface sur laquelle le port sécurity est activé apparait ici si shut ou no shut***
+##### ***une interface sur laquelle le port sécurity est activé apparait ici si shut ou no shut***
 
 ##### ***Activer port-security***
 
