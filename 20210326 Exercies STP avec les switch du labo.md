@@ -1,14 +1,5 @@
----
-attachments: [Clipboard_2021-03-25-16-13-11.png]
-title: 20210326 Exercies STP avec les switch du labo
-created: '2021-03-25T08:59:18.369Z'
-modified: '2021-03-25T15:30:34.703Z'
----
-
 # 20210326 Exercies STP avec les switch du labo
 
-
-### 
 
 ![](./assets/img/Clipboard_2021-03-25-16-13-11.png)
 
@@ -25,7 +16,7 @@ spannning-tree bpduguard enable des que spanning-tree portfast activé
 
 
 
-## ***Spanning-tree rootguard*** ( pas forcement lié a un port d'acces )
+##### ***Spanning-tree rootguard*** ( pas forcement lié a un port d'acces )
 
 empeche un switch malconfiguré de se proposer comme root ( il est ignoré )
 ***attention*** pas mettre ca entre switch primaire et secondaire
@@ -34,7 +25,7 @@ empeche un switch malconfiguré de se proposer comme root ( il est ignoré )
 
 -----------------------------------------------------------------------------------------------------------------
 
-### ***A ne pas confondre avec bpdu guard***
+##### ***A ne pas confondre avec bpdu guard***
 -- bpdu filter (filtrer les bpdu)   filtrer = ignorer     ***!!!! attention peut creer des gros problemes !!!!***
 peut etre activer globalement ou par interface.
 
@@ -43,7 +34,7 @@ bonne pratique a mettre en extremité
 
 ------------------------------------------------------------------------------------------------------------------
 
-***Activation global***
+##### ***Activation global***
 
 
 Uplink fast      = GARDE L'INFORMATION EN MEMOIRE
