@@ -457,11 +457,11 @@ modified: '2021-03-10T08:04:26.372Z'
     trunk permet de gardé la continuité du domaine de diffusion a travers plusieurs equipements ( switch )
 
 
-![](@attachment/Clipboard_2021-03-09-11-56-44.png)
+![](./assets/img/Clipboard_2021-03-09-11-56-44.png)
 
-![](@attachment/Clipboard_2021-03-09-12-09-57.png)
+![](./assets/img/Clipboard_2021-03-09-12-09-57.png)
 
-![](@attachment/Clipboard_2021-03-09-12-10-07.png)
+![](./assets/img/Clipboard_2021-03-09-12-10-07.png)
 
 isl = protocl proprietaire cisco
 ieee 802.1q ( dot1q) = protocol standard
@@ -469,7 +469,7 @@ ieee 802.1q ( dot1q) = protocol standard
 ISL = encapsulation taille de trame plus gros
 Dot1q = taggé information dans la trame 
 
-![](@attachment/Clipboard_2021-03-09-12-15-29.png)
+![](./assets/img/Clipboard_2021-03-09-12-15-29.png)
 
 dans le tag on trouve vlanid et qos (codé sur 3 bytes) 
 exemple telephone cisco sur lequel un pc est cablé, qos pr definir les trames voip prioritaire par rapport au pc ( les telephons cisco voip on a un micro switch pr le faire)
@@ -626,7 +626,7 @@ exemple telephone cisco sur lequel un pc est cablé, qos pr definir les trames v
                                             dynamic auto (veux bien negocier quand on lui demande)
                                             dynamic desirable (entreprends la négociation)
 
-![](@attachment/Clipboard_2021-03-09-14-37-54.png)
+![](./assets/img/Clipboard_2021-03-09-14-37-54.png)
 
           PROTOCOL DTP dynamic trunk protocol ( protocol sans sécurité et pas tres fiable )
           bonne pratique tjrs mettre en acces, sauf quand on veux un trunk

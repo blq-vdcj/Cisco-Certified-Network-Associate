@@ -12,18 +12,18 @@ modified: '2021-03-24T13:09:20.286Z'
 
 ## ***Broadcast storm***
 
-![](@attachment/Clipboard_2021-03-23-11-01-04.png)
+![](./assets/img/Clipboard_2021-03-23-11-01-04.png)
 
 tables mac inconsistentes 
 
-![](@attachment/Clipboard_2021-03-23-11-06-29.png)
+![](./assets/img/Clipboard_2021-03-23-11-06-29.png)
 
 ## ***bpdu***
 bridge protocol data unit
 
-![](@attachment/Clipboard_2021-03-23-11-09-02.png)
+![](./assets/img/Clipboard_2021-03-23-11-09-02.png)
 
-![](@attachment/Clipboard_2021-03-23-11-12-49.png)
+![](./assets/img/Clipboard_2021-03-23-11-12-49.png)
 
 bid = priorité ( sur 16 bits [ 0 a 65535 ] par defaut 32768 ) - mac address switch ( 48 bits )
 
@@ -31,18 +31,18 @@ le plus petit bridge id (bid) est la valeur selectionné
 
 1 ) election du root du bridge > + petit BID ( bridge id ) 
 2 ) determiné les root ports ( RP ) forward
-![](@attachment/Clipboard_2021-03-23-11-33-57.png)
+![](./assets/img/Clipboard_2021-03-23-11-33-57.png)
     designated Ports  (DP) forward 
     port bloqués      (BLK) pas de forward   ( 1 2 3 criteres discriminant )
         1) grand route past cost (RPC)
         2) plus grand bridge id (BID)
         3) le plus grand porte id (Port id)   
-![](@attachment/Clipboard_2021-03-23-11-39-22.png)
+![](./assets/img/Clipboard_2021-03-23-11-39-22.png)
 
 
 Etats des ports 
 
-![](@attachment/Clipboard_2021-03-23-11-59-23.png)
+![](./assets/img/Clipboard_2021-03-23-11-59-23.png)
 
 
 
@@ -62,12 +62,12 @@ MSTP    >>> RSTP par groupe de vlan
 
 ## Exercice apres midi
 
-![](@attachment/Clipboard_2021-03-23-13-40-55.png)
-![](@attachment/Clipboard_2021-03-23-13-47-10.png)
-![](@attachment/Clipboard_2021-03-23-14-17-14.png)
-![](@attachment/Clipboard_2021-03-23-14-50-37.png)
-![](@attachment/Clipboard_2021-03-23-16-02-07.png)
-![](@attachment/Clipboard_2021-03-23-16-31-46.png)
+![](./assets/img/Clipboard_2021-03-23-13-40-55.png)
+![](./assets/img/Clipboard_2021-03-23-13-47-10.png)
+![](./assets/img/Clipboard_2021-03-23-14-17-14.png)
+![](./assets/img/Clipboard_2021-03-23-14-50-37.png)
+![](./assets/img/Clipboard_2021-03-23-16-02-07.png)
+![](./assets/img/Clipboard_2021-03-23-16-31-46.png)
 
 
 

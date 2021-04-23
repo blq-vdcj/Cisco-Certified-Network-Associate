@@ -8,11 +8,11 @@ modified: '2021-03-12T15:32:15.829Z'
 # 20210312.2 ***CONNEXION A DISTANCE SSH/TELNET***
 
 TOPOLOGIE
-![](@attachment/Clipboard_2021-03-12-14-00-05.png)
+![](./assets/img/Clipboard_2021-03-12-14-00-05.png)
 
 --------------------------------------------------------------------------------------------------
 
-![](@attachment/Clipboard_2021-03-12-14-10-51.png)
+![](./assets/img/Clipboard_2021-03-12-14-10-51.png)
 
 
 ***routeur***

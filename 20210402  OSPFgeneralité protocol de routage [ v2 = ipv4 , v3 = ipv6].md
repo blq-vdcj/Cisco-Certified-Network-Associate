@@ -28,7 +28,7 @@ modified: '2021-04-02T12:30:50.760Z'
     EGP : exterior gateway protocol
     IGP : inferior gateway protocol 
 
-![](@attachment/Clipboard_2021-04-02-09-24-42.png)
+![](./assets/img/Clipboard_2021-04-02-09-24-42.png)
 
 egp = stabilité, prends quelque secondes pour appliqué les modifications, au niveau d'internet et des interconnections on prefere le choix des routes par l'humain
 
@@ -91,24 +91,24 @@ routing table :
                                 
                                 Routes
 
-![](@attachment/Clipboard_2021-04-02-10-18-01.png)
+![](./assets/img/Clipboard_2021-04-02-10-18-01.png)
 
 
-![](@attachment/Clipboard_2021-04-02-11-12-59.png)
+![](./assets/img/Clipboard_2021-04-02-11-12-59.png)
 
 ABR = AREA BORDER ROUTER  ( la ou on summarise)
 ASBR = Autonomous system border Routeur ( different protocol entre eux) on peut aussi summariser a cet endroit
 BBR = Back bone routeur  ( ici dans le schema routeur principal de la zone 0 )
 ** au sein d'une zone impossible de summarisé
 
-![](@attachment/Clipboard_2021-04-02-11-21-29.png)
+![](./assets/img/Clipboard_2021-04-02-11-21-29.png)
 
 
 ## Configuration ospf
 
 ### 1) ***Etablissement des adjacents*** ( echange de packet hello entre deux routeurs connecté )
 
-![](@attachment/Clipboard_2021-04-02-11-23-16.png)
+![](./assets/img/Clipboard_2021-04-02-11-23-16.png)
 
 que contient le message Hello :
 
@@ -127,7 +127,7 @@ que contient le message Hello :
 
 point a point : les deux communiques en 224.0.0.5
 Reseau Ethernet :
-![](@attachment/Clipboard_2021-04-02-11-35-07.png)
+![](./assets/img/Clipboard_2021-04-02-11-35-07.png)
 Trait vert = adjacence mais pas dechange d 'informations
 
 Plus grand routeur id = BR et deuxieme BDR  ( propre au reseau partager )
@@ -160,7 +160,7 @@ tout ce qui peut etre fait pour stabilisé la topologie doit etre fait !!!!!!
                       Loading State  ( LSR : LINK STATE REQUEST / LSU : LINK STATE UPDATE )                                           >>>> LSR / LSU
                       Full-state     ( synchronisation terminée )  [ STABLE ]
 
-![](@attachment/Clipboard_2021-04-02-11-56-43.png)
+![](./assets/img/Clipboard_2021-04-02-11-56-43.png)
 
 LSACK : accusé de reception ( tout message ospf est acquité a l exception des ack et des hellos )
 

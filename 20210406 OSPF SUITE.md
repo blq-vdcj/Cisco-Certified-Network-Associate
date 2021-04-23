@@ -7,7 +7,7 @@ modified: '2021-04-14T10:05:34.197Z'
 
 # 20210406 OSPF SUITE
 
-![](@attachment/Clipboard_2021-04-06-09-30-35.png)
+![](./assets/img/Clipboard_2021-04-06-09-30-35.png)
 
 propagation route par defaut
 et apprentissage summary

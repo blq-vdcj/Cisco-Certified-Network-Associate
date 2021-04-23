@@ -9,7 +9,7 @@ modified: '2021-03-12T12:56:19.644Z'
 
     > mac address
     > option: sticky
-![](@attachment/Clipboard_2021-03-12-09-23-48.png)
+![](./assets/img/Clipboard_2021-03-12-09-23-48.png)
 
 
 1) limiter le nombre d'adresse MAC
@@ -23,7 +23,7 @@ modified: '2021-03-12T12:56:19.644Z'
         >Restrict
         >Shutdown
 
-![](@attachment/Clipboard_2021-03-12-09-28-57.png)
+![](./assets/img/Clipboard_2021-03-12-09-28-57.png)
 
 *** Par defaut le port sécurity mets le mode shutdown et une seule adresse mac***
 

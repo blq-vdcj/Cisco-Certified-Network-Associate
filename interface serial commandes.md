@@ -11,12 +11,12 @@ modified: '2021-03-09T10:05:13.680Z'
 
 *CSU/DSU* (channel service unit/digital service unit)
 
-![](@attachment/Clipboard_2021-03-08-09-24-25.png)
+![](./assets/img/Clipboard_2021-03-08-09-24-25.png)
 
 *DTE* data terminal equipement 
 *DCE* Data communication equipement
 
-![](@attachment/Clipboard_2021-03-08-09-25-23.png)
+![](./assets/img/Clipboard_2021-03-08-09-25-23.png)
 
 dte qui s'adapte a la clock dce fournis la clock
 serial = dte + dce
@@ -33,7 +33,7 @@ unité de basse qu'on peut avoir sur les bandes seriels !
 **CPE** = Customer premises Equipment
 **DEMARC** = frontiere de responsabilité (ex: introduction proximus)
 
-![](@attachment/Clipboard_2021-03-08-09-41-03.png)
+![](./assets/img/Clipboard_2021-03-08-09-41-03.png)
 
 point a point tjrs même extremité 
 
@@ -44,7 +44,7 @@ Cell-switched (commuation de cellues)      = atm, meme que paquet mais beaucoup 
 
 mpls-vpn remplace frame relay (protocol lv 2.5)
 
-![](@attachment/Clipboard_2021-03-08-10-07-55.png)
+![](./assets/img/Clipboard_2021-03-08-10-07-55.png)
 
 **PPP point to point protocol**
 lcp = link control protocol 

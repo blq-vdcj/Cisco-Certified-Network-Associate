@@ -13,7 +13,7 @@ retablir machine virtuel = clic droit retablir ( different d'un point de restaur
 
 ## Domain
 
-![](@attachment/Clipboard_2021-03-24-10-00-31.png)
+![](./assets/img/Clipboard_2021-03-24-10-00-31.png)
 
 1 : Ajouter un controlleur de domaine a un domaine existant 
 
@@ -35,6 +35,6 @@ retablir machine virtuel = clic droit retablir ( different d'un point de restaur
     premiere creation d'un arbre ( ne peux exister sans foret)
     root domain name : jeff.lan ( ca vas de paire avec DNS voir screen)
 
-  ![](@attachment/Clipboard_2021-03-24-10-16-03.png)
+  ![](./assets/img/Clipboard_2021-03-24-10-16-03.png)
 
     mdps = Lolilol123 pour recuperer le domain

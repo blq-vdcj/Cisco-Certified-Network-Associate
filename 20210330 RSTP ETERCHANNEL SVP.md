@@ -48,69 +48,69 @@ modified: '2021-03-30T10:12:44.627Z'
 
 
 
-  ![](@attachment/Clipboard_2021-03-30-09-34-55.png)
-  ![](@attachment/Clipboard_2021-03-30-09-37-39.png) 
-  on ne fait plus ca a l'heure actuelle
-  ![](@attachment/Clipboard_2021-03-30-09-42-09.png)
-  interface full duplex edge p2p Edge
+![](./assets/img/Clipboard_2021-03-30-09-34-55.png)
+![](./assets/img/Clipboard_2021-03-30-09-37-39.png) 
+on ne fait plus ca a l'heure actuelle
+![](./assets/img/Clipboard_2021-03-30-09-42-09.png)
+interface full duplex edge p2p Edge
 
 
- ----------------------------------------------------------------------------------
+----------------------------------------------------------------------------------
 
 
 Transitions des ports      ( plus de phases d'attente des bpdu )
 
 
-    - Discarding  = blk ou shut 
-    - Learning   = negotiation avec les voisin
-    - Forwarding 
- 
-
-
- ----------------------------------------------------------------------------------
- Difference entre les stp
-
-    Stp (802.10)   1Cst (commun spanning-tree) = une arborescende spanning-tree pour l'ensemble des vlans
-    Pvstp+         1cst par vlan 
-    RSTP (802.1w)  1cst pr tt les vlans 
-    Pvrstp         1cst par vlan 
-    Mst(p)(802.1s) 1 ou + cst par groupe de vlan
+- Discarding  = blk ou shut 
+- Learning   = negotiation avec les voisin
+- Forwarding 
 
 
 
-    (Config)#spanning-tree mode <PVST,RAPID-PVST,MST>
-    rapid spanning tree pour fonctionner demande a tt les switch de la topologie d etre en rstp
+----------------------------------------------------------------------------------
+Difference entre les stp
+
+Stp (802.10)   1Cst (commun spanning-tree) = une arborescende spanning-tree pour l'ensemble des vlans
+Pvstp+         1cst par vlan 
+RSTP (802.1w)  1cst pr tt les vlans 
+Pvrstp         1cst par vlan 
+Mst(p)(802.1s) 1 ou + cst par groupe de vlan
+
+
+
+(Config)#spanning-tree mode <PVST,RAPID-PVST,MST>
+rapid spanning tree pour fonctionner demande a tt les switch de la topologie d etre en rstp
 
 
 -------------------------------------------------------------------------------------
 
 ## Etherchannel
 
-![](@attachment/Clipboard_2021-03-30-10-07-35.png)
+![](./assets/img/Clipboard_2021-03-30-10-07-35.png)
 
-    Int dans port channel
+Int dans port channel
 
-    - Même vitesses
-    - Même duplex
-    - Même mode ( acces ou trunk )
-    - Même Vlan NATIF par defaut le vlan1 mais peut etre changer
-    - Même Vlan qui transitent
-
-
-    Portchannel peut etre lvl 2 / lvl 3  
-
-    Eterchannel Statique  :  
-    Eterchannel Dynamique :LACP 802.3ad link agregation control protocol ( le plus employé a l'heure actuelle )
-                           PAgP proprietaire cisco Port agregation protocol
+- Même vitesses
+- Même duplex
+- Même mode ( acces ou trunk )
+- Même Vlan NATIF par defaut le vlan1 mais peut etre changer
+- Même Vlan qui transitent
 
 
-    Eterchannel = 8 Interfaces Maximum Actives
+Portchannel peut etre lvl 2 / lvl 3  
+
+Eterchannel Statique  :  
+Eterchannel Dynamique :LACP 802.3ad link agregation control protocol ( le plus employé a l'heure actuelle )
+PAgP proprietaire cisco Port agregation protocol
+
+
+Eterchannel = 8 Interfaces Maximum Actives
 
 
 ### ***Equilibrage de charges sur les liaisons***
 
 
-![](@attachment/Clipboard_2021-03-30-11-01-09.png)
+![](./assets/img/Clipboard_2021-03-30-11-01-09.png)
 
 ### ***Regles choix pr l'equilibrage***
 

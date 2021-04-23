@@ -8,9 +8,9 @@ modified: '2021-03-15T11:16:23.874Z'
 # 20210315 MULTY LAYER SWITCH
 
 
-![](@attachment/Clipboard_2021-03-15-09-57-55.png)
+![](./assets/img/Clipboard_2021-03-15-09-57-55.png)
 
-![](@attachment/Clipboard_2021-03-15-09-58-02.png)
+![](./assets/img/Clipboard_2021-03-15-09-58-02.png)
 MLS = ( multy layer switch )
 !!!!! une interface par domaine de diffusion !!!!
 

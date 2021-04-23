@@ -19,23 +19,23 @@ Mdps des vm : Pa$$w0rd
 
 CL1 :
 
-![](@attachment/Clipboard_2021-03-11-14-34-38.png)
+![](./assets/img/Clipboard_2021-03-11-14-34-38.png)
 
 CL2 :
 
-![](@attachment/Clipboard_2021-03-11-14-36-34.png)
+![](./assets/img/Clipboard_2021-03-11-14-36-34.png)
 
 DC1 :
 
-![](@attachment/Clipboard_2021-03-11-14-38-19.png)
+![](./assets/img/Clipboard_2021-03-11-14-38-19.png)
 
 RTR :
 
-![](@attachment/Clipboard_2021-03-11-14-41-15.png)
+![](./assets/img/Clipboard_2021-03-11-14-41-15.png)
 
 Srv1 :
 
-![](@attachment/Clipboard_2021-03-11-14-39-25.png)
+![](./assets/img/Clipboard_2021-03-11-14-39-25.png)
 
 
 cl1 >>>> dc1 >>>> srv1 >>>> RTR >>>>> cl2 >>>>> SRV2

@@ -10,7 +10,7 @@ modified: '2021-03-25T15:30:34.703Z'
 
 ### 
 
-![](@attachment/Clipboard_2021-03-25-16-13-11.png)
+![](./assets/img/Clipboard_2021-03-25-16-13-11.png)
 
 
 EDGE = PORTFAST
