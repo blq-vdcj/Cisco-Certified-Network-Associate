@@ -1,9 +1,3 @@
----
-title: 20210305 CLI ROUTEUR COMMAND
-created: '2021-03-06T10:18:31.411Z'
-modified: '2021-03-09T10:05:37.776Z'
----
-
 # ***20210305*** CLI ROUTEUR COMMAND
 
 ## ***exercices de début de matinée***
