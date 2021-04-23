@@ -7,7 +7,7 @@ modified: '2021-03-09T10:05:13.680Z'
 
 # 20210306 ISP // interface serial commandes
 
-## **WAN introduction**
+### **WAN introduction**
 
 *CSU/DSU* (channel service unit/digital service unit)
 
@@ -49,7 +49,7 @@ mpls-vpn remplace frame relay (protocol lv 2.5)
 **PPP point to point protocol**
 lcp = link control protocol 
 
-## ***Ethernet pour le WAN***
+### ***Ethernet pour le WAN***
 réseau du provider fait office de switch pour le client
 
 Ethernet over mpls EoMPLS ( fournit un service de niveau 2)
@@ -58,7 +58,7 @@ adsl // assynchrone
 sdsl // syncrhone
 
 
-# ***Config cli interface serial***
+### ***Config cli interface serial***
 
 ***P3R2#show interface serial 0/1/0***
 
