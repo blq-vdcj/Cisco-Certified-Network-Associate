@@ -1,14 +1,7 @@
----
-attachments: [Clipboard_2021-03-30-09-34-55.png, Clipboard_2021-03-30-09-37-39.png, Clipboard_2021-03-30-09-42-09.png, Clipboard_2021-03-30-10-07-35.png, Clipboard_2021-03-30-11-01-09.png]
-title: 20210330 RSTP ETERCHANNEL SVP
-created: '2021-03-30T07:12:46.039Z'
-modified: '2021-03-30T10:12:44.627Z'
----
-
 # 20210330 RSTP ETERCHANNEL SVP
 
 
-## RSTP
+##### RSTP
 
     RSTP = rapid spanning-tree
     topologie convergé = topologie en etat stable 
@@ -84,7 +77,7 @@ rapid spanning tree pour fonctionner demande a tt les switch de la topologie d e
 
 -------------------------------------------------------------------------------------
 
-## Etherchannel
+##### Etherchannel
 
 ![](./assets/img/Clipboard_2021-03-30-10-07-35.png)
 
@@ -107,12 +100,12 @@ PAgP proprietaire cisco Port agregation protocol
 Eterchannel = 8 Interfaces Maximum Actives
 
 
-### ***Equilibrage de charges sur les liaisons***
+##### ***Equilibrage de charges sur les liaisons***
 
 
 ![](./assets/img/Clipboard_2021-03-30-11-01-09.png)
 
-### ***Regles choix pr l'equilibrage***
+##### ***Regles choix pr l'equilibrage***
 
       - Src-MAc ( source Mac)
       - DST-MAC ( destination Mac)
@@ -126,7 +119,7 @@ Eterchannel = 8 Interfaces Maximum Actives
 
 ----------------------------------------------------------------------------------------------------
 
-## ***Exercices Eterchannel***             travailler en range interface
+##### ***Exercices Eterchannel***             travailler en range interface
 
     2960-7#sh cdp neigh
     Capability Codes: R - Router, T - Trans Bridge, B - Source Route Bridge
@@ -145,7 +138,7 @@ Eterchannel = 8 Interfaces Maximum Actives
     2960-7(config-if)#no sh
     2960-7(config-if)#
 
-#### ***1ere methode*** Static
+##### ***1ere methode*** Static
 
     2960-7#conf t
     Enter configuration commands, one per line.  End with CNTL/Z.
@@ -171,7 +164,7 @@ Eterchannel = 8 Interfaces Maximum Actives
     *Mar  1 00:17:38.751: %LINK-3-UPDOWN: Interface Port-channel1, changed state to up
     *Mar  1 00:17:39.757: %LINEPROTO-5-UPDOWN: Line protocol on Interface Port-channel1, changed state to up
 
-***Commande principal verificiation***
+##### ***Commande principal verificiation***
 
     2960-7#sh etherchannel summary
     Flags:  D - down        P - bundled in port-channel
@@ -215,7 +208,7 @@ Eterchannel = 8 Interfaces Maximum Actives
       ------------------- ---- --- --------- -------- --------------------------------
       Po1                 Root FWD 12        128.64   P2p
 
-*** creation trunk***
+##### ***creation trunk***
 
       2960-7(config)#int po1
       2960-7(config-if)#sw mode trunk
@@ -264,7 +257,7 @@ Eterchannel = 8 Interfaces Maximum Actives
         Appliance trust: none
 
 
-#### deconfigurer etherchannel
+##### deconfigurer etherchannel
 
     2960-7#conf t
       Enter configuration commands, one per line.  End with CNTL/Z.
@@ -298,7 +291,7 @@ Eterchannel = 8 Interfaces Maximum Actives
       2960-7(config)#no int po1
 
 
-#### *** 2 eme methode ***     PAGP
+##### ***2 eme methode***     PAGP
 
       2960-7#conf t
       Enter configuration commands, one per line.  End with CNTL/Z.
@@ -334,7 +327,7 @@ Eterchannel = 8 Interfaces Maximum Actives
       ------+-------------+-----------+-----------------------------------------------
       1      Po1(SU)         PAgP      Fa0/1(P)    Fa0/2(P)                      <<<<< protocol PAgP
 
-#### ***3eme methode***   LACP
+##### ***3eme methode***   LACP
 
 
     2960-7#conf t
@@ -367,7 +360,7 @@ Eterchannel = 8 Interfaces Maximum Actives
 
 
 
-#### ***Definition equilibrage de charge***
+##### ***Definition equilibrage de charge***
 
 
     2960-7#conf t
