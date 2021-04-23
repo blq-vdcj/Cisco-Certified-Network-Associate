@@ -1,10 +1,3 @@
----
-attachments: [Clipboard_2021-03-15-09-57-55.png, Clipboard_2021-03-15-09-58-02.png]
-title: 20210315 MULTY LAYER SWITCH
-created: '2021-03-15T08:13:41.249Z'
-modified: '2021-03-15T11:16:23.874Z'
----
-
 # 20210315 MULTY LAYER SWITCH
 
 
@@ -21,7 +14,7 @@ mettre le routage plus proche du domaine de diffusion
 
 # Routeur on a stick (roas)
 
-### ***creation vlan***
+##### ***creation vlan***
 
       2960-7#conf t
       Enter configuration commands, one per line.  End with CNTL/Z.
@@ -86,7 +79,7 @@ mettre le routage plus proche du domaine de diffusion
       2960-7(config-if-range)#sw acc vlan 40
       2960-7(config-if-range)#spawn portf
 
-### ***creation du trunk***
+##### ***creation du trunk***
       
       2960-7#conf t
       Enter configuration commands, one per line.  End with CNTL/Z.
@@ -104,7 +97,7 @@ mettre le routage plus proche du domaine de diffusion
       Access Mode VLAN: 1 (default)
       Trunking Native Mode VLAN: 1 (default)
 
-### ***deplacer les autre interface dans le vlan 666***
+##### ***deplacer les autre interface dans le vlan 666***
 
       2960-7#conf t
       Enter configuration commands, one per line.  End with CNTL/Z.
@@ -150,7 +143,7 @@ mettre le routage plus proche du domaine de diffusion
 
 ## ***ROUTEUR***
 
-### *** CREATION SUB INTERFACE***      ( pas besoin de les no-shut, car crée et active directement )
+##### *** CREATION SUB INTERFACE***      ( pas besoin de les no-shut, car crée et active directement )
 
       P3R2#conf t
         Enter configuration commands, one per line.  End with CNTL/Z.
@@ -172,7 +165,7 @@ mettre le routage plus proche du domaine de diffusion
         P3R2(config-subif)#ip address 10.0.40.1 255.255.255.0
         P3R2(config-subif)#exit
 
-### ***verification rapide des subinterface***
+##### ***verification rapide des subinterface***
 
         P3R2#sh ip int brief
           Interface                  IP-Address      OK? Method Status                Protocol
