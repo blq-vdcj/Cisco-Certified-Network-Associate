@@ -143,7 +143,7 @@ mettre le routage plus proche du domaine de diffusion
 
 ## ***ROUTEUR***
 
-##### *** CREATION SUB INTERFACE***      ( pas besoin de les no-shut, car crée et active directement )
+##### ***CREATION SUB INTERFACE***      ( pas besoin de les no-shut, car crée et active directement )
 
       P3R2#conf t
         Enter configuration commands, one per line.  End with CNTL/Z.
