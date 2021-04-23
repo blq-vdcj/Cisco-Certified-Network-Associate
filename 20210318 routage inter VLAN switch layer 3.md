@@ -1,19 +1,13 @@
----
-title: 20210318 routage inter VLAN switch layer 3
-created: '2021-03-18T12:39:56.442Z'
-modified: '2021-03-18T15:35:18.953Z'
----
-
 # 20210318  routage inter VLAN switch layer 3
 
-## ***activation routage sur switch layer3***
+##### ***activation routage sur switch layer3***
 
     MLS1: conf t
     MLS1(config)#ip routing                (commande pour activer le layer 3 en ipv4)
     MLS1(config)#ipv6 unicast              (commande pour activer le layer 3 en ipv6)
 
 
-## ***CREATION INTERFACE VLAN***
+##### ***CREATION INTERFACE VLAN***
 
     MLS1(config)#int vlan 100
     MLS1(config-if)#ip address 172.16.100.1 255.255.255.0
@@ -24,7 +18,7 @@ modified: '2021-03-18T15:35:18.953Z'
     %LINEPROTO-5-UPDOWN: Line protocol on Interface Vlan101, changed state to up
     ip address 172.16.101.1 255.255.255.0
 
-## ***verification***
+##### ***verification***
 
     MLS1#sh ip route
     Codes: C - connected, S - static, I - IGRP, R - RIP, M - mobile, B - BGP
@@ -42,7 +36,7 @@ modified: '2021-03-18T15:35:18.953Z'
     C       172.16.101.0 is directly connected, Vlan101
 
 
-## ***interconnexion entre layer 3***
+##### ***interconnexion entre layer 3***
 
     MLS1#conf t
     Enter configuration commands, one per line.  End with CNTL/Z.
@@ -56,7 +50,7 @@ modified: '2021-03-18T15:35:18.953Z'
     MLS1(config-if)#ip add 172.16.0.1 255.255.255.252
 
 
-## ***verficiation***
+##### ***verficiation***
 
     sh ip int brief
     Interface              IP-Address      OK? Method Status                Protocol 
@@ -108,7 +102,7 @@ modified: '2021-03-18T15:35:18.953Z'
     C       172.16.101.0/24 is directly connected, Vlan101
 
 
-## ***creation de route***
+##### ***creation de route***
 
     MLS2(config)#ip route 172.16.100.0 255.255.254.0 172.16.0.1
     MLS1(config)#ip route 172.16.102.0 255.255.254.0 172.16.0.2
