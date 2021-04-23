@@ -1,10 +1,3 @@
----
-attachments: [Clipboard_2021-04-06-09-30-35.png]
-title: 20210406 OSPF SUITE
-created: '2021-04-06T07:23:00.218Z'
-modified: '2021-04-14T10:05:34.197Z'
----
-
 # 20210406 OSPF SUITE
 
 ![](./assets/img/Clipboard_2021-04-06-09-30-35.png)
@@ -32,9 +25,9 @@ et apprentissage summary
       MLS1(config-router)#network 120.0.0.0 0.0.1.255 area 10  ( network des vlan )
 
 
-#### ***verification*** 
+##### ***verification*** 
 
-***MLS1#sh ip protocol***
+##### ***MLS1#sh ip protocol***
 
 
       Routing Protocol is "ospf 1"
@@ -58,7 +51,7 @@ et apprentissage summary
 
 
 
-***MLS1#sh ip ospf interface brief***
+##### ***MLS1#sh ip ospf interface brief***
 
       Interface    PID   Area            IP Address/Mask    Cost  State Nbrs F/C
       Et1/2        1     0               120.0.255.18/30    10    DR    0/0
@@ -69,7 +62,7 @@ et apprentissage summary
 
 ### MLS 2
 
-***MLS2#sh ip int brief***
+##### ***MLS2#sh ip int brief***
 
     Interface              IP-Address      OK? Method Status                Protocol
     Ethernet0/0            120.0.255.13    YES NVRAM  up                    up
@@ -78,7 +71,7 @@ et apprentissage summary
     Ethernet0/3            unassigned      YES unset  up                    up
     Ethernet1/0            120.0.255.2     YES NVRAM  up                    up
 
-#### ***Configuration***
+##### ***Configuration***
 
     MLS2#conf t
 
@@ -91,13 +84,13 @@ et apprentissage summary
     MLS2(config-router)#no passive-interface e1/0
 
 
-***configuration des interfaces methode 2***
+##### ***configuration des interfaces methode 2***
 
     MLS2(config)#int range e0/0 - 1, e1/0
     MLS2(config-if-range)#ip ospf 1 area 0
 
 
-***verification***
+##### ***verification***
 
     MLS2#sh ip protocols
     Routing Protocol is "ospf 1"
@@ -177,7 +170,7 @@ et apprentissage summary
 ### MLS 3
 
 
-***Config***
+##### ***Config***
 
     MLS3#sh ip int brief
     Interface              IP-Address      OK? Method Status                Protocol
@@ -213,7 +206,7 @@ et apprentissage summary
     MLS3(config-router)#network 120.0.255.16 0.0.0.3 area 0
 
 
-***verification usage***
+##### ***verification usage***
 
     MLS3#sh ip protocol
 
@@ -245,7 +238,7 @@ et apprentissage summary
       Et1/0        1     0               120.0.255.6/30     10    DR    0/0
 
 
-***verification adjacence***
+##### ***verification adjacence***
 
       MLS3#sh ip ospf neig
 
@@ -254,7 +247,7 @@ et apprentissage summary
       0.0.0.2           1   FULL/DR         00:00:39    120.0.255.9     Ethernet0/1
 
 
-***verification des routes***
+##### ***verification des routes***
 
 
       MLS3#sh ip route
@@ -323,7 +316,7 @@ Type escape sequence to abort.
 Sending 5, 100-byte ICMP Echos to 1.1.1.1, timeout is 2 seconds:
 !!!!!
 
-### ***integration d'une route dans ospf***
+##### ***integration d'une route dans ospf***
 
 
     R1#conf t
