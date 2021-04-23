@@ -1,10 +1,3 @@
----
-attachments: [Clipboard_2021-03-08-09-22-55.png, Clipboard_2021-03-08-09-23-05.png, Clipboard_2021-03-08-09-23-47.png, Clipboard_2021-03-08-09-24-25.png, Clipboard_2021-03-08-09-25-23.png, Clipboard_2021-03-08-09-41-03.png, Clipboard_2021-03-08-10-07-55.png, Clipboard_2021-03-08-11-45-06.png]
-title: 20210306 ISP // interface serial commandes
-created: '2021-03-08T08:06:39.391Z'
-modified: '2021-03-09T10:05:13.680Z'
----
-
 # 20210306 ISP // interface serial commandes
 
 ### **WAN introduction**
