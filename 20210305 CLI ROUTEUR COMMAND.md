@@ -8,11 +8,11 @@ modified: '2021-03-09T10:05:37.776Z'
 
 ## ***exercices de début de matinée***
 
-##### ***remise a zéro***
+##### ***REMISE A ZERO***
     erase nvram:
     reload ( pas sauvegarder la modif puisqu'on la vide)
 
-##### ***configuration de base(configuration terminal)***
+##### ***CONFIGURATION DE BASE(configuration terminal)***
     (config)# hostname <....>
     (config)# enable secret <....> [user exec a priviligié]
     (config)# service password-encryption
@@ -24,21 +24,21 @@ modified: '2021-03-09T10:05:37.776Z'
 
 ***********************************************************************************************************************************
 
-##### ***sauvegarde:***
+##### ***SAUVEGUARDE***
     exemple : P3R2#:copy running-config startup-config (attention au erreurs!!!!)
     Password: = admin
     P3R2>enable
     Password: cisco
     P3R2#
 
-###### ***verification de la config :***
+###### ***VERIFICATION DE LA CONFIG :***
 
     exemple : P3R2# show running-config
     afficher la configuration actuelle
 
 ***********************************************************************************************************************************
 
-###### ***commande informative:***
+###### ***COMMANDE INFORMATIVE :***
 
     show version ==== information générique de la version du routeur
     show flash: afficher les fichiers dans la flash
@@ -65,7 +65,7 @@ modified: '2021-03-09T10:05:37.776Z'
 | up     |    up    |  >>>>>>>>>>>>>>>> okay!
 
 
-##### ***show interfaces*** (informations des interfaces)
+##### ***SHOW INTERFACES*** (informations des interfaces)
     show interfaces fa0/0
     FastEthernet0/0 is administratively down, line protocol is down
     Hardware is Gt96k FE, address is 001e.7a4c.a88e (bia 001e.7a4c.a88e) >>>>>> mac adress
@@ -97,7 +97,7 @@ modified: '2021-03-09T10:05:37.776Z'
 
 ***********************************************************************************************************************************
 
-##### ***configuration interface***
+##### ***CONFIGURATION INTERFACE***
 
     P3R2#conf t
     Enter configuration commands, one per line. End with CNTL/Z.
@@ -115,10 +115,10 @@ modified: '2021-03-09T10:05:37.776Z'
     auto Enable AUTO speed configuration
     P3R2(config-if)#speed 100
 
-***Annulé speed***
+***ANNULE SPEED***
     p3R2(config-if)#no speed
 
-***description***
+***DESCRIPTION***
     P3R2(config-if)#description (permet de donner une description,permet de reconstruire plus rapide //documentation)
 
     P3R2(config-if)#ip address ?
@@ -142,7 +142,7 @@ modified: '2021-03-09T10:05:37.776Z'
     Serial0/1/1 unassigned YES unset administratively down down
     SSLVPN-VIF0 unassigned NO unset up up
 
-**methode 1**
+**METHODE 1**
 
     P3R2#show int fa0/0
 
@@ -175,7 +175,7 @@ modified: '2021-03-09T10:05:37.776Z'
     0 lost carrier, 0 no carrier
     0 output buffer failures, 0 output buffers swapped out
 
-**methode 2**
+**METHODE 2**
 
     P3R2#show ip interface fa0/0 ( plus concentrer sur le niveau 3 = show ip interface brief mais en complet )
 
@@ -216,7 +216,7 @@ modified: '2021-03-09T10:05:37.776Z'
     WCCP Redirect inbound is disabled
     WCCP Redirect exclude is disabled
 
-  **methode 3**  
+  **METHODE 3**  
 
     P3R2#show protocols
 
@@ -232,7 +232,7 @@ modified: '2021-03-09T10:05:37.776Z'
 
 ***********************************************************************************************************************************
 
-##### ***creation de route***
+##### ***CREATION DE ROUTE***
 
     P3R2#conf t
     Enter configuration commands, one per line. End with CNTL/Z.
@@ -255,7 +255,7 @@ modified: '2021-03-09T10:05:37.776Z'
 ***********************************************************************************************************************************
 
 
-##### **interpretation commande ping**
+##### **INTERPRETATION COMMANDE PING**
 
     P3R2#ping 10.0.0.11
 
@@ -284,7 +284,7 @@ modified: '2021-03-09T10:05:37.776Z'
     P3R2(config-if)#
     *Mar 5 10:01:01.235: %LINK-3-UPDOWN: Interface FastEthernet0/0, changed state to up ( quand changement de vitesse interface redemarre )
   
-##### ***voir la table arp***
+##### ***VOIR TABLE ARP***
   
     P3R2#show arp
     Protocol Address Age (min) Hardware Addr Type Interface
@@ -293,8 +293,9 @@ modified: '2021-03-09T10:05:37.776Z'
     Internet 10.0.0.32 - 001e.7a4c.a88e ARPA FastEthernet0/0
     Internet 10.0.0.33 3 001e.130b.ffe6 ARPA FastEthernet0/0
 
-##### ***purge table arp***
-  **1 méthode**
+##### ***PURGE TABLE ARP***
+
+** 1 METHODE**
   
     P3R2#clear arp-cache
     P3R2#show arp
@@ -305,7 +306,7 @@ modified: '2021-03-09T10:05:37.776Z'
     Internet 10.0.0.33 0 001e.130b.ffe6 ARPA FastEthernet0/0
     age = temps avant expiration
 
-  **2 méthode**
+  **2 METHODE**
 
     P3R2#clear ip arp 10.0.0.11
     P3R2#show arp
@@ -316,7 +317,7 @@ modified: '2021-03-09T10:05:37.776Z'
     Internet 10.0.0.33 0 001e.130b.ffe6 ARPA FastEthernet0/0
 ***********************************************************************************************************************************
 
-##### ***show ip table***
+##### ***SHOW IP TABLE***
 
     P3R2#show ip route
     Codes: C - connected, S - static, R - RIP, M - mobile, B - BGP
@@ -337,7 +338,7 @@ modified: '2021-03-09T10:05:37.776Z'
 
 ***********************************************************************************************************************************
 
-##### ***créer une interface loopback***
+##### ***CREER UNE INTERFACE LOOPBAK***
     P3R2#conf t
     Enter configuration commands, one per line. End with CNTL/Z.
     P3R2(config)#interface
@@ -400,7 +401,7 @@ modified: '2021-03-09T10:05:37.776Z'
     10.0.0.0/24 is subnetted, 1 subnets
     C 10.0.0.0 is directly connected, FastEthernet0/0
 
-**troubleshooting**
+**TROUBLESHOOTING**
 
     P3R2#show ip route 14.14.14.14
     % Network not in table
