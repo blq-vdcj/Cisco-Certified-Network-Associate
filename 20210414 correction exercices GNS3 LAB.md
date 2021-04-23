@@ -1,9 +1,3 @@
----
-title: 20210414 correction exercices GNS3 LAB
-created: '2021-04-14T07:15:59.879Z'
-modified: '2021-04-14T08:41:47.453Z'
----
-
 # 20210414   correction exercices GNS3 LAB
 
 commencer par les etherchannel , et faire d'ailleur l'eterchannel de niveau 3
