@@ -267,54 +267,54 @@ et apprentissage summary
 
 ### R1
 
-***Configuration***
+##### ***Configuration***
 
-R1#sh ip int brief
-Interface                  IP-Address      OK? Method Status                Protocol
-FastEthernet0/0            120.0.255.1     YES NVRAM  up                    up
-Serial0/0                  80.0.0.2        YES NVRAM  up                    up
-FastEthernet0/1            120.0.255.5     YES NVRAM  up                    up
-Serial0/1                  unassigned      YES NVRAM  administratively down down
-Serial0/2                  unassigned      YES NVRAM  administratively down down
-Serial0/3                  unassigned      YES NVRAM  administratively down down
-Serial0/4                  unassigned      YES NVRAM  administratively down down
-Serial0/5                  unassigned      YES NVRAM  administratively down down
-FastEthernet1/0            unassigned      YES NVRAM  administratively down down
+      R1#sh ip int brief
+      Interface                  IP-Address      OK? Method Status                Protocol
+      FastEthernet0/0            120.0.255.1     YES NVRAM  up                    up
+      Serial0/0                  80.0.0.2        YES NVRAM  up                    up
+      FastEthernet0/1            120.0.255.5     YES NVRAM  up                    up
+      Serial0/1                  unassigned      YES NVRAM  administratively down down
+      Serial0/2                  unassigned      YES NVRAM  administratively down down
+      Serial0/3                  unassigned      YES NVRAM  administratively down down
+      Serial0/4                  unassigned      YES NVRAM  administratively down down
+      Serial0/5                  unassigned      YES NVRAM  administratively down down
+      FastEthernet1/0            unassigned      YES NVRAM  administratively down down
 
 
 NE PAS INTEGRER LE SERIAL
 
 
-***configuration ospf***
+##### ***configuration ospf***
 
-R1(config)#router ospf 1
-R1(config-router)#router-id 1.0.0.1
-R1(config-router)#pass
-R1(config-router)#passive-interface default
-R1(config-router)#no passive-interface fa0/0
-R1(config-router)#no passive-interface fa0/1
-R1(config-router)#exit
-R1(config)#int fa0/0
-R1(config-if)#ip ospf 1 area 0
-R1(config-if)#int fa0/1
-R1(config-if)#ip ospf 1 area 0
+      R1(config)#router ospf 1
+      R1(config-router)#router-id 1.0.0.1
+      R1(config-router)#pass
+      R1(config-router)#passive-interface default
+      R1(config-router)#no passive-interface fa0/0
+      R1(config-router)#no passive-interface fa0/1
+      R1(config-router)#exit
+      R1(config)#int fa0/0
+      R1(config-if)#ip ospf 1 area 0
+      R1(config-if)#int fa0/1
+      R1(config-if)#ip ospf 1 area 0
  
 
 
 --------------------------------------------------------------------------------- 
 
-*** configuration route par defaut sur R1***
+##### *** configuration route par defaut sur R1***
 
-R1#conf t
-Enter configuration commands, one per line.  End with CNTL/Z.
-R1(config)#ip route 0.0.0.0 0.0.0.0 s0/0
+      R1#conf t
+      Enter configuration commands, one per line.  End with CNTL/Z.
+      R1(config)#ip route 0.0.0.0 0.0.0.0 s0/0
 
 
-R1#ping 1.1.1.1
+      R1#ping 1.1.1.1
 
-Type escape sequence to abort.
-Sending 5, 100-byte ICMP Echos to 1.1.1.1, timeout is 2 seconds:
-!!!!!
+      Type escape sequence to abort.
+      Sending 5, 100-byte ICMP Echos to 1.1.1.1, timeout is 2 seconds:
+      !!!!!
 
 ##### ***integration d'une route dans ospf***
 
@@ -388,34 +388,34 @@ Liste des differents reseau qu'ospf a appris ( pas necessairement dans la table 
 
 * + > = dans la table de routage
 
-MLS2#sh ip ospf rib
+##### MLS2#sh ip ospf rib
 
-            OSPF Router with ID (0.0.0.2) (Process ID 1)
+                  OSPF Router with ID (0.0.0.2) (Process ID 1)
 
 
-                Base Topology (MTID 0)
+                      Base Topology (MTID 0)
 
-OSPF local RIB
-Codes: * - Best, > - Installed in global RIB
+      OSPF local RIB
+      Codes: * - Best, > - Installed in global RIB
 
-*>  120.0.0.0/24, Inter, cost 11, area 0
-      via 120.0.255.14, Ethernet0/0
-*>  120.0.1.0/24, Inter, cost 11, area 0
-      via 120.0.255.14, Ethernet0/0
-*   120.0.255.0/30, Intra, cost 10, area 0, Connected
-      via 120.0.255.2, Ethernet1/0
-*>  120.0.255.4/30, Intra, cost 20, area 0
-      via 120.0.255.1, Ethernet1/0
-      via 120.0.255.10, Ethernet0/1
-*   120.0.255.8/30, Intra, cost 10, area 0, Connected
-      via 120.0.255.9, Ethernet0/1
-*   120.0.255.12/30, Intra, cost 10, area 0, Connected
-      via 120.0.255.13, Ethernet0/0
-*>  120.0.255.16/30, Intra, cost 20, area 0
-      via 120.0.255.10, Ethernet0/1
-      via 120.0.255.14, Ethernet0/0
-*>  0.0.0.0/0, Ext2, cost 1, tag 1
-      via 120.0.255.1, Ethernet1/0
+      *>  120.0.0.0/24, Inter, cost 11, area 0
+            via 120.0.255.14, Ethernet0/0
+      *>  120.0.1.0/24, Inter, cost 11, area 0
+            via 120.0.255.14, Ethernet0/0
+      *   120.0.255.0/30, Intra, cost 10, area 0, Connected
+            via 120.0.255.2, Ethernet1/0
+      *>  120.0.255.4/30, Intra, cost 20, area 0
+            via 120.0.255.1, Ethernet1/0
+            via 120.0.255.10, Ethernet0/1
+      *   120.0.255.8/30, Intra, cost 10, area 0, Connected
+            via 120.0.255.9, Ethernet0/1
+      *   120.0.255.12/30, Intra, cost 10, area 0, Connected
+            via 120.0.255.13, Ethernet0/0
+      *>  120.0.255.16/30, Intra, cost 20, area 0
+            via 120.0.255.10, Ethernet0/1
+            via 120.0.255.14, Ethernet0/0
+      *>  0.0.0.0/0, Ext2, cost 1, tag 1
+            via 120.0.255.1, Ethernet1/0
 
 
 -------------------------------------------------------------------------------------------------
@@ -495,26 +495,26 @@ Codes: * - Best, > - Installed in global RIB
 ### ***Changer la bande passante d'une interface***
 
 
-MLS1#conf t
-Enter configuration commands, one per line.  End with CNTL/Z.
-MLS1(config)#int e1/1
-MLS1(config-if)#bandwidth 100000
+      MLS1#conf t
+      Enter configuration commands, one per line.  End with CNTL/Z.
+      MLS1(config)#int e1/1
+      MLS1(config-if)#bandwidth 100000
 
 
-MLS2#conf t
-MLS2(config)#int e0/0
-MLS2(config-if)#bandwidth 100000
+      MLS2#conf t
+      MLS2(config)#int e0/0
+      MLS2(config-if)#bandwidth 100000
 
 ----------------------------------------------------------------------------------------------------
 
 ### ***Changer le cout par defaut ospf***
 
 
-R1#conf t
-R1(config)#router ospf 1
-R1(config-router)#auto-cost reference-bandwidth 1000000
-% OSPF: Reference bandwidth is changed.
-        Please ensure reference bandwidth is consistent across all routers.
+      R1#conf t
+      R1(config)#router ospf 1
+      R1(config-router)#auto-cost reference-bandwidth 1000000
+      % OSPF: Reference bandwidth is changed.
+              Please ensure reference bandwidth is consistent across all routers.
 
 
 
