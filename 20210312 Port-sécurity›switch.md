@@ -18,9 +18,9 @@
 
 ![](./assets/img/Clipboard_2021-03-12-09-28-57.png)
 
-*** Par defaut le port sécurity mets le mode shutdown et une seule adresse mac***
+***Par defaut le port sécurity mets le mode shutdown et une seule adresse mac***
 
-*** Ne marche pas normalement sur port dynamic ou port trunk;sauf si port sécurity parametre sur acces et changer en trunk ou dynamique***
+***Ne marche pas normalement sur port dynamic ou port trunk;sauf si port sécurity parametre sur acces et changer en trunk ou dynamique***
 
 ##### Config dans le switch
 
