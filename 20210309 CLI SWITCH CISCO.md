@@ -1,13 +1,6 @@
----
-attachments: [Clipboard_2021-03-09-11-56-44.png, Clipboard_2021-03-09-12-09-57.png, Clipboard_2021-03-09-12-10-07.png, Clipboard_2021-03-09-12-15-29.png, Clipboard_2021-03-09-14-37-54.png]
-title: 20210309 CLI SWITCH CISCO
-created: '2021-03-09T08:12:52.784Z'
-modified: '2021-03-10T08:04:26.372Z'
----
-
 # 20210309 CLI SWITCH CISCO
 
-***switch a utiliser #2960-7 (convention steve)***
+##### ***switch a utiliser #2960-7 (convention steve)***
 
     routeur >>> fa0/0 192.168.0.32 /24
     
