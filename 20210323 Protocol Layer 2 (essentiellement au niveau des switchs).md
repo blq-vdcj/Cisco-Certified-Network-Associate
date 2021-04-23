@@ -1,16 +1,8 @@
----
-attachments: [Clipboard_2021-03-23-11-01-04.png, Clipboard_2021-03-23-11-06-29.png, Clipboard_2021-03-23-11-09-02.png, Clipboard_2021-03-23-11-12-49.png, Clipboard_2021-03-23-11-31-16.png, Clipboard_2021-03-23-11-33-57.png, Clipboard_2021-03-23-11-39-22.png, Clipboard_2021-03-23-11-59-23.png, Clipboard_2021-03-23-13-40-55.png, Clipboard_2021-03-23-13-47-10.png, Clipboard_2021-03-23-14-17-14.png, Clipboard_2021-03-23-14-50-37.png, Clipboard_2021-03-23-16-02-07.png, Clipboard_2021-03-23-16-29-51.png, Clipboard_2021-03-23-16-31-46.png]
-title: 20210323 Protocol Layer 2 (essentiellement au niveau des switchs)
-created: '2021-03-23T09:54:35.230Z'
-modified: '2021-03-24T13:09:20.286Z'
----
-
-
-
 # 20210323 Protocol Layer 2 (essentiellement au niveau des switchs)
-# ***spanning-tree Protocol ieee 802.1 D***
 
-## ***Broadcast storm***
+##### ***spanning-tree Protocol ieee 802.1 D***
+
+##### ***Broadcast storm***
 
 ![](./assets/img/Clipboard_2021-03-23-11-01-04.png)
 
@@ -18,7 +10,7 @@ tables mac inconsistentes
 
 ![](./assets/img/Clipboard_2021-03-23-11-06-29.png)
 
-## ***bpdu***
+##### ***bpdu***
 bridge protocol data unit
 
 ![](./assets/img/Clipboard_2021-03-23-11-09-02.png)
@@ -60,7 +52,7 @@ MSTP    >>> RSTP par groupe de vlan
 
 --------------------------------------------------------------------------------------------------------------------------
 
-## Exercice apres midi
+##### Exercice apres midi
 
 ![](./assets/img/Clipboard_2021-03-23-13-40-55.png)
 ![](./assets/img/Clipboard_2021-03-23-13-47-10.png)
