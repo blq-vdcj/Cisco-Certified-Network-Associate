@@ -1,36 +1,30 @@
----
-title: 20210317 explication supplémentaire
-created: '2021-03-17T08:22:32.430Z'
-modified: '2021-03-30T10:28:35.958Z'
----
-
 # 20210317 explication supplémentaire 
 
-***P3R2#:show history***
+##### ***P3R2#:show history***
 
     historique des commandes dans l'ordre ou on les a tappés si fermeture de la session plus d'historique
     
-***P3R2(config): DO show history***
+##### ***P3R2(config): DO show history***
 
     historique du mode de configuration 
 
-***P3R2#:terminal history size <nombres de lignes>***   ( pas sauvegardé dans la config)
+##### ***P3R2#:terminal history size <nombres de lignes>***   ( pas sauvegardé dans la config)
 
-***augmenter le nombre de ligne de l'historique***
+##### ***augmenter le nombre de ligne de l'historique***
 
     P3R2(config):line con 0
     P3R2(config-line):history size <nombres de lignes>
 
-*** traceroute plus rapide ***
+##### ***traceroute plus rapide ***
 
     P3R2#: traceroute 10.11.0.1 numeric            ( bypass des resolutions dns )
 
-***desactiver la resolution de nom***
+##### ***desactiver la resolution de nom***
     
     P3R2#:conf t
     P3R2#:no ip domain-lookup ( desactive la resolution de nom par le routeur )
 
-***ALIAS***
+##### ***ALIAS***
 
     P3R2#: show aliases
     Exec mode aliases:
@@ -44,7 +38,7 @@ modified: '2021-03-30T10:28:35.958Z'
     w                     where
 
 
-***configuration client dhcp***
+##### ***configuration client dhcp***
 
     P3R2#conf t
     Enter configuration commands, one per line.  End with CNTL/Z.
@@ -58,7 +52,7 @@ modified: '2021-03-30T10:28:35.958Z'
     S*   0.0.0.0/0 [254/0] via 172.30.13.1              (mise automatiquement par dhcp car fournis passerelle par defaut)
 
 
-***information fournis par dhcp***
+##### ***information fournis par dhcp***
 
     P3R2#show dhcp lease
     Temp IP addr: 172.30.13.34  for peer on Interface: FastEthernet0/0
@@ -80,7 +74,7 @@ modified: '2021-03-30T10:28:35.958Z'
 
 
 
-####  TEST CABLE DIAGNOSTICS TDR      (fonctionne tres bien sur des cable de longues distances )
+#####  TEST CABLE DIAGNOSTICS TDR      (fonctionne tres bien sur des cable de longues distances )
 
       2960-7#test cable-diagnostics tdr int fa0/1
       Link state may be affected during TDR test
