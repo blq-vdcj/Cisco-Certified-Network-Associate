@@ -1,10 +1,3 @@
----
-attachments: [Clipboard_2021-03-24-10-00-31.png, Clipboard_2021-03-24-10-16-03.png]
-title: 20210324 Windows server Sergio
-created: '2021-03-24T08:25:03.227Z'
-modified: '2021-03-24T09:17:51.224Z'
----
-
 # 20210324 Windows server Sergio
 
 
