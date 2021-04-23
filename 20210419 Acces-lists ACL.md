@@ -1,9 +1,3 @@
----
-title: 20210419 Acces-lists ACL
-created: '2021-04-19T07:14:20.644Z'
-modified: '2021-04-19T10:18:11.826Z'
----
-
 # 20210419  ***Acces-lists*** ACL
 
 Acces control list
@@ -33,7 +27,7 @@ une regle peux avoir deux actions  : Permit
          - ports source/destination    
 
 
-***une acces list par direction ( Entrée/Sortie ) et par interface***
+##### ***une acces list par direction ( Entrée/Sortie ) et par interface***
 
 
 quand des regles se chauveche , les regles les plus precises sont a mettre en PREMIER
@@ -49,7 +43,7 @@ quand des regles se chauveche , les regles les plus precises sont a mettre en PR
       NE MARCHE PAS CAR PAS DANS LE BONNE ORDRE
 
 dernier commande tjrs presente dans les acces list  ( si aucun acl match = )
-***Deny ip any any***
+##### ***Deny ip any any***
 
 
 
@@ -77,14 +71,14 @@ Exercices Labo
 Configuration SSH : admin passwd pasderoutepasdepaquet
 
 
-***NON MODIFIABLE***
+##### ***NON MODIFIABLE***
     
     ACL numérotées (ancien model)    
     numero défini si standar ou etendue
     0 a 99 = STD
     de 100 a 199 = ETENDUE
 
-***MODIFIABLE***    
+##### ***MODIFIABLE***    
     
     ACL nommées    (nouveau modele)
     Spécifie le type 
@@ -96,7 +90,7 @@ Configuration SSH : admin passwd pasderoutepasdepaquet
 
 
 
-***1ere methode***
+##### ***1ere methode***
 
       P3R2#conf t
       Enter configuration commands, one per line.  End with CNTL/Z.
@@ -127,14 +121,14 @@ autoriser tout sauf 192.168.0.0/24
       P3R2(config)#access-list 1 permit any
 
 
-## Verifier access-list
+##### Verifier access-list
 
       P3R2#show access-list 1
       Standard IP access list 1
             10 deny   192.168.0.0, wildcard bits 0.0.0.255          |   ( 4 matches ) <<<<< compteur de tentatives
             20 permit any
 
-## configurer sur les lignes virtuels
+##### configurer sur les lignes virtuels
 
       P3R2#conf t
       Enter configuration commands, one per line.  End with CNTL/Z.
@@ -154,7 +148,7 @@ autoriser tout sauf 192.168.0.0/24
         20 permit any (2 matches)
 
 
-***2e methode***
+##### ***2e methode***
 
 
       P3R2(config)#ip access-list ?
@@ -180,7 +174,7 @@ autoriser tout sauf 192.168.0.0/24
         P3R2(config-std-nacl)#deny 192.168.0.0 0.0.0.255
         P3R2(config-std-nacl)#permit any
 
-***Verification***
+##### ***Verification***
 
       P3R2#sh access-list
           Standard IP access list 1
@@ -231,7 +225,7 @@ on peut edité les ACL
                 25 permit any
 
 
-***RENUMEROTER LES REGLES***
+##### ***RENUMEROTER LES REGLES***
 
             P3R2(config)#ip access-list resequence ACCESS-VTY 20 20
             P3R2#sh access-list
@@ -245,7 +239,7 @@ on peut edité les ACL
 
 
 
-***Changer les access list*** 
+##### ***Changer les access list*** 
 
             P3R2(config)#line vty 0 4
             P3R2(config-line)#no access-class 1 in
@@ -268,7 +262,7 @@ autorisé SSH depuis tt sauf 192.168.0.0/24
       P3R2(config)#access-list 100 deny tcp 192.168.0.0 0.0.0.255 any eq 22
       P3R2(config)#access-list 100 permit tcp any any eq 22
 
-***verification***
+##### ***verification***
 
       P3R2#sh access-list 100
       Extended IP access list 100
@@ -299,7 +293,7 @@ autorisé SSH depuis tt sauf 192.168.0.0/24
             P3R2(config-if)#
             *Apr 19 08:57:20.491: %OSPF-5-ADJCHG: Process 1, Nbr 31.31.31.31 on FastEthernet0/0 from EXSTART to DOWN, Neighbor Down: Dead timer expired
             
-***PAS de communication OSPF***
+##### ***PAS de communication OSPF***
 
         P3R2#sh ip int fa0/0
         FastEthernet0/0 is up, line protocol is up
@@ -313,11 +307,11 @@ autorisé SSH depuis tt sauf 192.168.0.0/24
           Outgoing access list is not set
           Inbound  access list is 100                               >>>>> access list appliqué
 
-***Correction recuperation ospf***
+##### ***Correction recuperation ospf***
 
           P3R2(config)#no access-list 100                           >>>> supprime l'acces list
 
-***recreation access list numeroté***
+##### ***recreation access list numeroté***
 
           P3R2(config)#ip access-list extended FA00_IN
           P3R2(config-ext-nacl)#permit icmp 192.168.0.0 0.0.0.255 any
@@ -327,18 +321,18 @@ autorisé SSH depuis tt sauf 192.168.0.0/24
           P3R2(config)#int fa0/0                                    >>>> ecrase l'ancienne commande
           P3R2(config-if)#ip access-group fa00_IN in
 
-***Resolution message ospf***
+##### ***Resolution message ospf***
 
 
           P3R2(config)#ip access-list extended FA00_IN
           P3R2(config-ext-nacl)#permit ospf any any
 
-***verifiier ping***
+##### ***verifiier ping***
 
           P3R2(config-ext-nacl)#5 permit icmp any any echo-reply
 
 
-***REINITIALISER COMPTEUR MATCHES***
+##### ***REINITIALISER COMPTEUR MATCHES***
           
           P3R2#clear access-list counters FA00_IN
 
