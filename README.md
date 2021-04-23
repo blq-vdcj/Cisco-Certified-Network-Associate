@@ -27,7 +27,11 @@ CCNA - Notes Matières
 [HSRP](https://github.com/vandcj/Cisco-Certified-Network-Associate/blob/main/assets/%23%20Notable/20210414.2%20HSRP%20fhrp%20commande.md)
 
 
-[OSPF](https://github.com/vandcj/Cisco-Certified-Network-Associate/blob/main/assets/%23%20Notable/20210402%20%20OSPFgeneralit%C3%A9%20protocol%20de%20routage%20%5B%20v2%20%3D%20ipv4%20%2C%20v3%20%3D%20ipv6%5D.md)
+[OSPF 1](https://github.com/vandcj/Cisco-Certified-Network-Associate/blob/main/assets/%23%20Notable/20210402%20%20OSPFgeneralit%C3%A9%20protocol%20de%20routage%20%5B%20v2%20%3D%20ipv4%20%2C%20v3%20%3D%20ipv6%5D.md)
+
+[OSPF 2](https://github.com/vandcj/Cisco-Certified-Network-Associate/blob/main/assets/%23%20Notable/20210402.2%20OSPF%20exercices%20packet%20tracer.md)
+
+[OSPF 3 gsn](https://github.com/vandcj/Cisco-Certified-Network-Associate/blob/main/assets/%23%20Notable/20210402.2%20OSPF%20exercices%20packet%20tracer.md)
 
 [VTP](https://github.com/vandcj/Cisco-Certified-Network-Associate/blob/main/assets/%23%20Notable/20210406.2%20VTP%20(%20cisco%20).md)
 
