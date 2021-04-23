@@ -24,7 +24,7 @@ modified: '2021-03-09T10:05:37.776Z'
 
 ***********************************************************************************************************************************
 
-##### ***SAUVEGUARDE***
+##### ***SAUVEGARDE***
     exemple : P3R2#:copy running-config startup-config (attention au erreurs!!!!)
     Password: = admin
     P3R2>enable
@@ -115,10 +115,10 @@ modified: '2021-03-09T10:05:37.776Z'
     auto Enable AUTO speed configuration
     P3R2(config-if)#speed 100
 
-***ANNULE SPEED***
+##### ***ANNULE SPEED***
     p3R2(config-if)#no speed
 
-***DESCRIPTION***
+##### ***DESCRIPTION***
     P3R2(config-if)#description (permet de donner une description,permet de reconstruire plus rapide //documentation)
 
     P3R2(config-if)#ip address ?
@@ -126,7 +126,7 @@ modified: '2021-03-09T10:05:37.776Z'
     dhcp IP Address negotiated via DHCP
     pool IP Address autoconfigured from a local DHCP pool
 
-**10.0.0.xy /24 xy = P3R2 xy = 32 CONVENTION ETABLI PAR STEVE !**
+##### **10.0.0.xy /24 xy = P3R2 xy = 32 CONVENTION ETABLI PAR STEVE !**
 
     P3R2(config-if)#ip address 10.0.0.32 255.255.255.0?
     secondary Make this IP address a secondary address
