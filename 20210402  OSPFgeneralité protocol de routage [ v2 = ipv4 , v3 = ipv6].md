@@ -1,29 +1,22 @@
----
-attachments: [Clipboard_2021-04-02-09-24-42.png, Clipboard_2021-04-02-10-18-01.png, Clipboard_2021-04-02-11-12-59.png, Clipboard_2021-04-02-11-21-29.png, Clipboard_2021-04-02-11-23-16.png, Clipboard_2021-04-02-11-35-07.png, Clipboard_2021-04-02-11-56-43.png]
-title: '20210402 OSPF // generalité protocol de routage [ v2 = ipv4 , v3 = ipv6]'
-created: '2021-04-02T07:13:02.888Z'
-modified: '2021-04-02T12:30:50.760Z'
----
-
 # 20210402  OSPF // generalité protocol de routage  [ v2 = ipv4 , v3 = ipv6]
 
-***protocol de routage statique*** :
+##### ***protocol de routage statique*** :
 
     Probleme de réactivité 
 
-***Protocol de routage dynamique*** :
+##### ***Protocol de routage dynamique*** :
 
     2 interets majeur 
         - redondance 
         - reagit au changement de topologie
 
 
-***Categorie de protocol de routage*** :
+##### ***Categorie de protocol de routage*** :
 
     - Déterminer les meilleurs routes
     - Assurer un chemin sans boucle
     
-***Catégorie*** :
+##### ***Catégorie*** :
 
     EGP : exterior gateway protocol
     IGP : inferior gateway protocol 
@@ -33,11 +26,11 @@ modified: '2021-04-02T12:30:50.760Z'
 egp = stabilité, prends quelque secondes pour appliqué les modifications, au niveau d'internet et des interconnections on prefere le choix des routes par l'humain
 
 
-***EGP*** = Protocol : 
+##### ***EGP*** = Protocol : 
       
                  - BGP (border gateway protocol) [ Protocol a vecteur de chemin ]
 
-***IGP***= Protocol : 
+##### ***IGP***= Protocol : 
 
                  - Protocol à vecteur de distance  : rip(standard), igrp(cisco), EIGRP (cisco) (extended inhanced gateway routing protocol) [protocol de vecteur de distance "avancé" ou dit "hybrid"]
                  [ Metric Maximum (distance administrative)]
@@ -74,7 +67,7 @@ Algorythme > Dijkstra/SPF
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------
 
-## ***fonctionnement d'ospf***
+##### ***fonctionnement d'ospf***
 
 Adjencency / neighbords table :
 
@@ -106,7 +99,7 @@ BBR = Back bone routeur  ( ici dans le schema routeur principal de la zone 0 )
 
 ## Configuration ospf
 
-### 1) ***Etablissement des adjacents*** ( echange de packet hello entre deux routeurs connecté )
+#### 1) ***Etablissement des adjacents*** ( echange de packet hello entre deux routeurs connecté )
 
 ![](./assets/img/Clipboard_2021-04-02-11-23-16.png)
 
@@ -123,23 +116,23 @@ que contient le message Hello :
               routeur adjacent : ( relation avec lequel j'echange des donnés ospf [en gros permet de savoir si c est un nouveau copain] )
 
 
-**[*] criteres d'adjacence**
+##### ***criteres d'adjacence***
 
-point a point : les deux communiques en 224.0.0.5
-Reseau Ethernet :
-![](./assets/img/Clipboard_2021-04-02-11-35-07.png)
-Trait vert = adjacence mais pas dechange d 'informations
+        point a point : les deux communiques en 224.0.0.5
+        Reseau Ethernet :
+        ![](./assets/img/Clipboard_2021-04-02-11-35-07.png)
+        Trait vert = adjacence mais pas dechange d 'informations
 
-Plus grand routeur id = BR et deuxieme BDR  ( propre au reseau partager )
+        Plus grand routeur id = BR et deuxieme BDR  ( propre au reseau partager )
 
-si on veux influencer qui est br ou bdr , on peut jouer sur la priorité 
-on peut aussi dire qu'un routeur ne veux pas participer a l'election du DR/BDR
+        si on veux influencer qui est br ou bdr , on peut jouer sur la priorité 
+        on peut aussi dire qu'un routeur ne veux pas participer a l'election du DR/BDR
 
-ospf orienté stabilité , donc meme si un routeur avec une priorité est ajouté au reseau partager , celui ci devras attendre que le BR et le BDR tombe en panne pour prendre leur place
+        ospf orienté stabilité , donc meme si un routeur avec une priorité est ajouté au reseau partager , celui ci devras attendre que le BR et le BDR tombe en panne     pour prendre leur place
 
 
 
-***Routeur-ID***
+##### ***Routeur-ID***
 
         32 bits
         xxx.xxx.xxx.xxx
@@ -151,7 +144,7 @@ ospf orienté stabilité , donc meme si un routeur avec une priorité est ajout�
 tout ce qui peut etre fait pour stabilisé la topologie doit etre fait !!!!!!
 
 
-### 2) Etat des adjacence 
+#### 2) Etat des adjacence 
 
         etat initial = Down State     ( etat qui ne dure qu'une fraction de seconde mais c'est l'etat initial )                       >>>> HELLO
                       Init state     ( un HELLO a été recu )                                                                          >>>> HELLO
@@ -165,7 +158,7 @@ tout ce qui peut etre fait pour stabilisé la topologie doit etre fait !!!!!!
 LSACK : accusé de reception ( tout message ospf est acquité a l exception des ack et des hellos )
 
 
-***LSA***
+##### ***LSA***
 
           LSA 1 : Routeur LSA   Origine : Routeur         ( carte d'identité du routeur dans la topologie ) 
           LSA 2 : Network LSA   Origine : DR              ( identifie un reseau partager ( exemple reseau ethernet ) )       
@@ -181,7 +174,7 @@ LSACK : accusé de reception ( tout message ospf est acquité a l exception des 
 
 
 
-### ***Metrique OSPF***  ( COST )
+##### ***Metrique OSPF***  ( COST )
 
 la metrique se calcule = une fraction 100 (MBPS) / BW ( exprimé en  mbps) 
 
@@ -194,7 +187,7 @@ TE            >>>>>>>>> Cost = 100/10000 = 1
 calcul chemin = cost additionné les un derriere les autres 
 
 
-### Network Type                  
+##### Network Type                  
                                    Hello time                 Dead time                   DR/BDR                      Adj-dynamique
                                    ----------                 ---------                   ------                      -------------   
 
