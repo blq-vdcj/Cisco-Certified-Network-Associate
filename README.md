@@ -58,8 +58,6 @@
 		- [Troubleshooting PPPoE](#troubleshooting-pppoe)
 - [GRE](#gre)
 	- [Troubleshooting GRE](#troubleshooting-gre)
-- [RIPv2](#ripv2)
-	- [Troubleshooting RIPv2](#troubleshooting-ripv2)
 - [EIGRP](#eigrp)
 	- [EIGRP with ipv6](#eigrp-with-ipv6)
 - [OSPF](#ospf)
@@ -752,33 +750,6 @@ ip mtu
 | # show ip interface brief tunnel23 | Line hould be up, given a route to the destination.   |
 | # show inteface tunnel23           | Tunnel source, dest, protocol                         |
 | # show ip route                    | Should include the transit net as directly connected. |
-
-
-## RIPv2
-
-| Command                                                             | Description                                             |
-|:--------------------------------------------------------------------|:--------------------------------------------------------|
-| (config)# router rip                                                | Enable RIP and enter it's config mode                   |
-| (config-router)# version 2                                          | Set RIPv2, which is Classless                           |
-| (config-router)# network 192.168.0.0                                | Advertise connected networks which are within <net>.    |
-| (config-router)# network 0.0.0.0                                    | Advertise all connected networks.                       |
-| (config-router)# timers basic <update> <invalid> <holddown> <flush> |                                                         |
-| (config-router)# no auto-summary                                    | Don't summarize a smaller subnet route in a bigger one. |
-| (config-router)# passive-interface g1/1                             | Don't send RIP updates out this interface               |
-| (config-router)# passive-interface default                          | Don't send RIP updates on any if by default             |
-| (config-router)# no passive-interface g1/2                          | Overwrite passive-interface default                     |
-| (config-router)# default information originate                      | Advertise the default route.                            |
-| (config-if)# no ip rip advertise 123                                |                                                         |
-
-### Troubleshooting RIPv2
-
-| Command                 | Description                                              |
-|:------------------------|:---------------------------------------------------------|
-| # show ip[v6] protocols | Show rip timers, interfaces, networks,                   |
-| # show ip rip database  | Routes learned by rip, used to combile the routing table |
-| # show ip route         | Show learned routes                                      |
-| # clear ip route *      | Get rid of all routes                                    |
-
 
 ## EIGRP
 
