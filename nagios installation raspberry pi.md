@@ -1,11 +1,3 @@
----
-attachments: [Clipboard_2021-05-29-17-56-43.png]
-tags: [github]
-title: nagios installation raspberry pi
-created: '2021-05-29T15:55:41.881Z'
-modified: '2021-05-29T18:30:09.239Z'
----
-
 # nagios installation raspberry pi
 
 
