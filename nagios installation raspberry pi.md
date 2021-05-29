@@ -91,7 +91,7 @@ We will also use two a2enmod commands to make sure that the required Apache modu
     sudo a2enmod rewrite
     sudo a2enmod cgi
 
-### ** 7. In our final step, we will be creating an Apache user that you will use to access the Nagios interface on your Raspberry Pi.**
+### **7. In our final step, we will be creating an Apache user that you will use to access the Nagios interface on your Raspberry Pi.**
 
 The following command will create a user called nagiosadmin. You will be asked to specify a password for this user.
 
