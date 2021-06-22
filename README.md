@@ -1016,3 +1016,39 @@ CCNA - Notes Matières
 
 [NAT](https://github.com/vandcj/Cisco-Certified-Network-Associate/blob/main/assets/%23%20Notable/20210419.2%20NAT%20et%20ACL.md)
 
+[PPP](https://github.com/vandcj/Cisco-Certified-Network-Associate/blob/main/assets/%23%20Notable/20210428%20PPP.md)
+	
+[IPV6](https://github.com/vandcj/Cisco-Certified-Network-Associate/blob/main/assets/%23%20Notable/20210503%20IPV6.md)
+	
+[IPV6-Router](https://github.com/vandcj/Cisco-Certified-Network-Associate/blob/main/assets/%23%20Notable/20210503.2%20IPV6%20ROUTEUR.md)
+
+[IPV6-Suite](https://github.com/vandcj/Cisco-Certified-Network-Associate/blob/main/assets/%23%20Notable/20210505%20Ipv6%20Suite.md)
+
+[Trunk-Allowed](https://github.com/vandcj/Cisco-Certified-Network-Associate/blob/main/assets/%23%20Notable/20210519.2%20TRUNK%20ALLOWED.md)
+	
+[VOICE VLAN](https://github.com/vandcj/Cisco-Certified-Network-Associate/blob/main/assets/%23%20Notable/20210519.3%20VOICE%20VLAN.md)
+	
+[Vlan privé](https://github.com/vandcj/Cisco-Certified-Network-Associate/blob/main/assets/%23%20Notable/20210519.3%20vlan%20priv%C3%A9.md)
+	
+[EIGRP](https://github.com/vandcj/Cisco-Certified-Network-Associate/blob/main/assets/%23%20Notable/20210601%20EIGRP.md)
+	
+[EIGRP-Gns3](https://github.com/vandcj/Cisco-Certified-Network-Associate/blob/main/assets/%23%20Notable/20210602%20EIGRP%20SUITE%20EXO%20GNS3.md)
+	
+[EIGRP-propagation route](https://github.com/vandcj/Cisco-Certified-Network-Associate/blob/main/assets/%23%20Notable/20210602.2%20EIGRP%20Propagation%20route%20par%20default%20GNS%20EXO.md)
+	
+[Interface Tunnel](https://github.com/vandcj/Cisco-Certified-Network-Associate/blob/main/assets/%23%20Notable/20210609%20Exercices%20Gns3.md)
+	
+[Sécurity-service](https://github.com/vandcj/Cisco-Certified-Network-Associate/blob/main/assets/%23%20Notable/20210609%20S%C3%A9curity%20Service.md)
+	
+[VPN](https://github.com/vandcj/Cisco-Certified-Network-Associate/blob/main/assets/%23%20Notable/20210609.2%20VPN.md)
+
+[API](https://github.com/vandcj/Cisco-Certified-Network-Associate/blob/main/assets/%23%20Notable/20210610%20Api.md)
+	
+[Cloud](https://github.com/vandcj/Cisco-Certified-Network-Associate/blob/main/assets/%23%20Notable/20210621%20CLOUD%20chapter%2015%20du%20livre.md)
+	
+[EIGRP-Steve note](https://github.com/vandcj/Cisco-Certified-Network-Associate/blob/main/assets/%23%20Notable/eigrp%20STEVE.md)
+	
+[FTP/TFTP](https://github.com/vandcj/Cisco-Certified-Network-Associate/blob/main/assets/%23%20Notable/ftp.md)
+	
+
+
