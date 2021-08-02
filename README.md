@@ -1,7 +1,7 @@
 
 # Cisco-Certified-Network-Associate
 
-CCNA - [DATASHEET](https://github.com/vandcj/Cisco-Certified-Network-Associate/blob/main/assets/%23%20Notable/datasheet)
+CCNA - [DATASHEET](https://github.com/vandcj/Cisco-Certified-Network-Associate/blob/main/assets/%23%20Notable/README)
 
 
 CCNA - Notes Matières :
