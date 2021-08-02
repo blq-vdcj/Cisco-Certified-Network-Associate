@@ -1050,5 +1050,13 @@ CCNA - Notes Matières
 	
 [FTP/TFTP](https://github.com/vandcj/Cisco-Certified-Network-Associate/blob/main/assets/%23%20Notable/ftp.md)
 	
-
+[SNMP](https://github.com/vandcj/Cisco-Certified-Network-Associate/blob/main/assets/%23%20Notable/20210623%20SNMP%20Chapter%2012%20(Simple%20Network%20Management%20Protocol).md)
+	
+[SDN](https://github.com/vandcj/Cisco-Certified-Network-Associate/blob/main/assets/%23%20Notable/20210628%20SDN%20et%20Controller%20bases%20network.md)
+	
+[QOS](https://github.com/vandcj/Cisco-Certified-Network-Associate/blob/main/assets/%23%20Notable/20210629%20QOS.md)
+	
+[SDA](https://github.com/vandcj/Cisco-Certified-Network-Associate/blob/main/assets/%23%20Notable/20210701%20SDA%20fabric%2C%20underlay%2C%20overlay.md)
+	
+[Ansible/Puppet/Chef](https://github.com/vandcj/Cisco-Certified-Network-Associate/blob/main/assets/%23%20Notable/20210705%20Ansible%20Puppet%20%26%20Chef.md)
 
